@@ -1,0 +1,23 @@
+<?php
+include_once("../../login/check.php");
+if(isset($_POST)){
+include_once("../../class/controlenfermera.php");
+extract($_POST);
+$controlenfermera=new controlenfermera;
+$idenfermera=$_SESSION['idenfermera'];
+if(empty($idenfermera)){
+	$idenfermera=0;	
+}
+$valor=array("idhistorialinterno"=>"$idhistorialinterno",
+			"fechacontrol"=>"'$fechacontrol'",
+			"horacontrol"=>"'$horacontrol'",
+			"medicacion"=>"'$medicacion'",
+			"vomito"=>"'$vomito'",
+			"orina"=>"'$orina'",
+			"depost"=>"'$depost'",
+			"descripcion"=>"'$descripcion'",
+			"idenfermera"=>$idenfermera,
+);
+$controlenfermera->insertar($valor);
+}
+?>

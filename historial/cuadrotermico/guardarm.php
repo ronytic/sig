@@ -1,0 +1,26 @@
+<?php
+include_once("../../login/check.php");
+if(isset($_POST)){
+include_once("../../class/cuadrotermico.php");
+extract($_POST);
+$cuadrotermico=new cuadrotermico;
+$idenfermera=$_SESSION['idenfermera'];
+if(empty($idenfermera)){
+	$idenfermera=0;	
+}
+$valor=array("idhistorialinterno"=>"$idhistorialinterno",
+			"fechacontrol"=>"'$fechacontrol'",
+			"horacontrol"=>"'$horacontrol'",
+			"turno"=>"'$turno'",
+			"temperatura"=>"'$temperatura'",
+			"talla"=>"'$talla'",
+			"peso"=>"'$peso'",
+			"presion"=>"'$presion'",
+			"respiracion"=>"'$respiracion'",
+			"orina"=>"'$orina'",
+			"deposicion"=>"'$deposicion'",
+			"idenfermera"=>$idenfermera,
+);
+$cuadrotermico->insertar($valor);
+}
+?>

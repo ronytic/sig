@@ -1,0 +1,19 @@
+<?php
+include_once("../../login/check.php");
+if(isset($_POST)){
+include_once("../../class/ordenesmedicas.php");
+extract($_POST);
+$ordenesmedicas=new ordenesmedicas;
+$idmedico=$_SESSION['idmedico'];
+if(empty($idmedico)){
+	$idmedico=0;	
+}
+$valor=array("idhistorialinterno"=>"$idhistorialinterno",
+			"fechaevolucion"=>"'$fechaevolucion'",
+			"horaevolucion"=>"'$horaevolucion'",
+			"ordenmedica"=>"'$ordenmedica'",
+			"idmedico"=>$idmedico,
+);
+$ordenesmedicas->insertar($valor);
+}
+?>

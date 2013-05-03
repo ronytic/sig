@@ -1,0 +1,21 @@
+<?php
+include_once("../../login/check.php");
+if(isset($_POST)){
+include_once("../../class/tarjetacontrol.php");
+extract($_POST);
+$tarjetacontrol=new tarjetacontrol;
+$idenfermera=$_SESSION['idenfermera'];
+if(empty($idenfermera)){
+	$idenfermera=0;	
+}
+$valor=array("idhistorialinterno"=>"$idhistorialinterno",
+			"fechacontrol"=>"'$fechacontrol'",
+			"horacontrol"=>"'$horacontrol'",
+			"dato"=>"'$dato'",
+			"ordenes"=>"'$ordenes'",
+			"discontinuo"=>"'$discontinuo'",
+			"idenfermera"=>$idenfermera,
+);
+$tarjetacontrol->insertar($valor);
+}
+?>
