@@ -85,7 +85,7 @@ include_once("../../cabecerahtml.php");
     </tr>
    </table>
 </fieldset>
-<fieldset>
+<fieldset <?php echo $pac['sexo']=="M"?'style="display:none;"':'';?>>
 	<legend>ANTECEDENTES GINECO-OBSTETRICOS</legend>
     <table>
     	<tr><td><?php campos("Menarca","menarca","text",$hist['menarca'],0,array_merge($revi,array("size"=>20)),"",1);?></td>
@@ -108,7 +108,7 @@ include_once("../../cabecerahtml.php");
         <tr><td><?php campos("Abdomen","abdomen","text",$hist['abdomen'],0,array_merge($revi,array("size"=>100)),"",1);?></td></tr>
     </table>
 </fieldset>
-<fieldset>
+<fieldset <?php echo $pac['sexo']=="M"?'style="display:none;"':'';?>>
 	<legend>EXAMEN GINECO-OBSTETRICOS</legend>
     <table>
     	<tr><td><?php campos("Examen Gineco-Obstetricos","examenginecoobstetrico","textarea",$hist['examenginecoobstetrico'],0,array_merge($revi,array("cols"=>80,"rows"=>10)));?></td></tr>
@@ -141,7 +141,8 @@ include_once("../../cabecerahtml.php");
         <tr>
         	<td colspan="4"><?php campos("","idmedicamento","select",$medicamentos,0,array_merge($revi,array("class"=>"seleccionar")));?></td>
         </tr>
-        <tr class="cabecera"><td>Cantidad</td><td>Cada</td><td>Durante</td></tr>
+        <tr class="cabecera"><td>Total Medicamento</td><td>Cantidad</td><td>Cada</td><td>Durante</td></tr>
+         	<td><?php campos("","totalmedicamento","number","",0,array_merge($revi,array("style"=>"width:100px")));?></td>
             <td><?php campos("","cantidadmedicamento","number","",0,array_merge($revi,array("style"=>"width:100px")));?></td>
             <td><?php campos("","cadamedicamento","text","",0,array_merge($revi,array("size"=>15,"maxlength"=>100)));?></td>
             <td><?php campos("","durantemedicamento","text","",0,array_merge($revi,array("size"=>15,"maxlength"=>100)));?></td>

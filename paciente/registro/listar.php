@@ -24,6 +24,8 @@ $menulateral=array("Listado"=>"listado.php","Nuevo"=>"nuevo.php");
 					</tr>
 					<tr>
 						<td><input type="submit" value="Buscar"></td>
+                        <td colspan="2"><a href="todopaciente.php" class="botonerror">Reporte Todos los Pacientes
+                        </a></td>
 					</tr>
 				</table>
 			</form>

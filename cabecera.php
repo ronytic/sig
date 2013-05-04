@@ -1,5 +1,5 @@
 </head>
-<body onUnload="javascript:alert('Por que cierras la ventana? Maldito tu...')" >
+<body onUnload="" >
 
 <?php //print_r($_SESSION);?>
 <div class="container_12" id="contenedor"> 

@@ -1,7 +1,7 @@
 <?php
 include_once("../../login/check.php");
 include_once("../../funciones/funciones.php");
-$titulo="Listado de Enfermeras";
+$titulo="Listado de Pedidos a Farmacia";
 $folder="../../";
 	$anombre="especialidad";
 	include_once '../../class/'.$anombre.'.php';
@@ -18,17 +18,18 @@ $folder="../../";
 			<form action="busqueda.php" method="post" id="busqueda">
 				<table class="tablabusqueda">
 					<tr>
+                    	<td><?php echo campos("Numero Historial | HE-xxxx","idhistorialexterno","text","",1);?><span class="pequeno">HE-xxxxxx</span></td>
 						<td><?php echo campos("Nombre","nombre","text","",1);?></td>
                         <td><?php echo campos("Ap. Paterno","apep","text","",0);?></td>
-                        <td><?php echo campos("Ap. Materno","apem","text","",0);?></td>
                     </tr>
                     <tr>
+                    	<td><?php echo campos("Ap. Materno","apem","text","",0);?></td>
                         <td><?php echo campos("CI","ci","text","",0);?></td>
+                        <td><?php echo campos("Fecha Elaboración","fechaelaboracion","date",date("Y-m-d"),0);?></td>
+                       	<td><?php echo campos("Revisado","revisado","select",array(0=>"No",1=>"Si"));?></td>
 					</tr>
 					<tr>
 						<td><input type="submit" value="Buscar"></td>
-                        <td colspan="2"><a href="todoenfermera.php" class="botonerror">Reporte de Toda la Enfermería
-                        </a></td>
 					</tr>
 				</table>
 			</form>

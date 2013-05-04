@@ -26,9 +26,6 @@ $us=array_shift($usuarios->mostrar($_SESSION['idusuario']));
 	$(document).ready(function(){
 		$(".seleccionar").chosen();	
 	});
-	$(document).close(function(){
-		alert("asd");	
-	});
 	/*$( window ).bind( 'beforeunload', function() {
     	return false;
 	} );*/

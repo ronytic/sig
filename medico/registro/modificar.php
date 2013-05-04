@@ -25,22 +25,22 @@ include_once("../../cabecerahtml.php");
     <table class="tablareg">
       <tr>
         <td><?php campos("Nombre","nombre","text",$datos['nombre'],1,array("required"=>"required"));?></td>
-      	<td><?php campos("Paterno","paterno","text",$datos['paterno'],0);?> </td>
+      	<td><?php campos("Paterno","paterno","text",$datos['paterno'],0,array("required"=>"required"));?> </td>
       </tr>
       <tr>
-        <td><?php campos("Materno","materno","text",$datos['materno'],0);?> </td>
-	    <td><?php campos("Teléfono","telefono","text",$datos['telefono'],0);?> </td>
+        <td><?php campos("Materno","materno","text",$datos['materno'],0,array("required"=>"required"));?> </td>
+	    <td><?php campos("Teléfono","telefono","text",$datos['telefono'],0,array("required"=>"required"));?> </td>
       </tr>  
       <tr>
-        <td><?php campos("Dirección","direccion","text",$datos['direccion']);?></td>
+        <td><?php campos("Dirección","direccion","text",$datos['direccion'],0,array("required"=>"required"));?></td>
       	<td><?php campos("Correo","correo","text",$datos['correo'],0);?> </td>
       </tr>
       <tr>
-        <td><?php campos("CI","ci","text",$datos['ci']);?></td>
-      	<td><?php campos("Cedula","ced","text",$datos['ced']);?> </td>
+        <td><?php campos("CI","ci","text",$datos['ci'],0,array("required"=>"required"));?></td>
+      	<td><?php campos("Cedula","ced","text",$datos['ced'],0,array("required"=>"required"));?> </td>
       </tr>
       <tr>
-        <td><?php campos("Fecha Egreso","fecegre","text",$datos['fecegre']);?></td>
+        <td><?php campos("Fecha Egreso","fecegre","text",$datos['fecegre'],0,array("required"=>"required"));?></td>
       	<td><?php campos("Especialidad","idespecialidad","select",$espe,0,"",$datos['idespecialidad']);?> </td>
       </tr>
       <tr><td><?php campos("Guardar","","submit");?></td></tr>

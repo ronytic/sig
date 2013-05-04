@@ -32,7 +32,6 @@ escribir(50,utf8_decode("Dr.: ".$med['nombre']." ".$med['paterno']." ".$med['mat
 $pdf->SetXY(125,44);
 escribir(35,hoy());
 
-
 //
 
 $pdf->SetXY(15,60);

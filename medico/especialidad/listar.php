@@ -19,6 +19,8 @@ include_once($folder."cabecerahtml.php");
 					</tr>
 					<tr>
 						<td><input type="submit" value="Buscar"></td>
+                        <td colspan="2"><a href="todoespecialidad.php" class="botonerror">Reporte de Toda las Especialidades
+                        </a></td>
 					</tr>
 				</table>
 			</form>

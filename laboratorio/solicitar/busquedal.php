@@ -27,6 +27,6 @@ if (!empty($_POST)) {
 	}
 	
 	$titulo=array("fechaexamen"=>"Fecha Examen","nombre"=>"Nombre","apep"=>"Apellido Paterno","apem"=>"Apellido Materno","obs"=>"Observación");
-	listadoTabla($titulo,$datos,1,"","","",array("Ver"=>"ver.php"));
+	listadoTabla($titulo,$datos,1,"","","",array("Ver"=>"ver.php","Reporte"=>"reporte.php"));
 }
 ?>

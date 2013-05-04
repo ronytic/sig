@@ -6,6 +6,7 @@ extract($_POST);
 $recetamedica=new recetamedica;
 $valor=array("idhistorialexterno"=>"$idhistorialexterno",
 			"idmedicamento"=>"$idmedicamento",
+			"total"=>"'$totalmedicamento'",
 			"cantidad"=>"'$cantidad'",
 			"durante"=>"'$durante'",
 			"cada"=>"'$cada'",

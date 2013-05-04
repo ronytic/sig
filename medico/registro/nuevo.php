@@ -18,22 +18,22 @@ include_once("../../cabecerahtml.php");
     <table class="tablareg">
       <tr>
         <td><?php campos("Nombre","nombre","text","",1,array("required"=>"required"));?></td>
-      	<td><?php campos("Paterno","paterno","text","",0);?> </td>
+      	<td><?php campos("Paterno","paterno","text","",0,array("required"=>"required"));?> </td>
       </tr>
       <tr>
-        <td><?php campos("Materno","materno","text","",0);?> </td>
-	    <td><?php campos("Teléfono","telefono","text","",0);?> </td>
+        <td><?php campos("Materno","materno","text","",0,array("required"=>"required"));?> </td>
+	    <td><?php campos("Teléfono","telefono","text","",0,array("required"=>"required"));?> </td>
       </tr>  
       <tr>
-        <td><?php campos("Dirección","direccion","text","");?></td>
+        <td><?php campos("Dirección","direccion","text","",0,array("required"=>"required"));?></td>
       	<td><?php campos("Correo","correo","text","",0);?> </td>
       </tr>
       <tr>
-        <td><?php campos("CI","ci","text","");?></td>
-      	<td><?php campos("Cedula","ced","text","");?> </td>
+        <td><?php campos("CI","ci","text","",0,array("required"=>"required"));?></td>
+      	<td><?php campos("Cedula","ced","text","",0,array("required"=>"required"));?> </td>
       </tr>
       <tr>
-        <td><?php campos("Fecha Egreso","fecegre","text","");?></td>
+        <td><?php campos("Fecha Egreso","fecegre","text","",0,array("required"=>"required"));?></td>
       	<td><?php campos("Especialidad","idespecialidad","select",$espe);?> </td>
       </tr>
       <tr><td><?php campos("Guardar","","submit");?></td></tr>

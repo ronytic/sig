@@ -28,6 +28,8 @@ $folder="../../";
 					</tr>
 					<tr>
 						<td><input type="submit" value="Buscar"></td>
+                        <td colspan="2"><a href="todomedico.php" class="botonerror">Reporte Todos los Medicos
+                        </a></td>
 					</tr>
 				</table>
 			</form>
