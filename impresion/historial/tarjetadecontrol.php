@@ -104,7 +104,7 @@ foreach($tarjetacontrol->mostrarTodo("idhistorialinterno=".$hist['idhistorialint
 	$pdf->SetFont("arial","",9);
 	$pdf->Cell(15,5.5,date("d-m-y",strtotime($tc['fechacontrol'])));
 	$pdf->Cell(12,5.5,date("H:i",strtotime($tc['horacontrol'])));
-	$pdf->Cell(122,5.5,utf8_decode($tc['ordenes']));
+	$pdf->Cell(122,5.5,recortarTexto(utf8_decode($tc['ordenes']),150));
 	$pdf->Cell(28,5.5,utf8_decode($tc['dato']),0,0,"C");
 	$pdf->Cell(18,5.5,utf8_decode($tc['discontinuo']),0,0,"C");
 

@@ -57,27 +57,27 @@ escribir("55",$med['paterno']." ".$med['materno']." ".$med['nombre']);
 
 //motivointernacio
 $pdf->SetXY(20,80);
-$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['motivointernacion'])),699),0);
+$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['motivointernacion'],699)),0);
 //antecedentepersonal
 $pdf->SetXY(20,139);
-$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['antecedentespersonales']),590),0);
+$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['antecedentespersonales'],590)),0);
 //antecedentesfamiliares
 $pdf->SetXY(20,191);
-$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['antecedentesfamiliares']),590),0);
+$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['antecedentesfamiliares'],590)),0);
 //examen general
 $pdf->SetXY(20,245);
-$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['examengeneral']),699),0);
+$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['examengeneral'],699)),0);
 //Examen Segmentario
 if($pdf->GetY()>=57){
 	$pdf->AddPage();
 }
 $pdf->SetXY(20,57);
-$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['examensegmentario']),1180),0);
+$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['examensegmentario'],1180)),0);
 
 
 //Examen especial
 $pdf->SetXY(20,144);
-$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['examenespecial']),1180),0);
+$pdf->MultiCell(175,6.5,utf8_decode(recortarTexto($hist['examenespecial'],1180)),0);
 
 $pdf->SetXY(50,224);
 escribir(145,$hist['diagnosticoprobable'],"","","",0);
